@@ -64,6 +64,10 @@ define('CURL_TIMEOUT',5);
 define('CHECK_CMD','echo fuckshe');
 define('CHECK_CMD_RESULT','fuckshe');
 
+if (!extension_loaded('curl')) {
+    exit('Error: need curl extension !');
+}
+
 echo 'start fucking....<br>';
 
 $hostList = file('host.txt');
